@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a8d6687fe1898016bd40bbff8e6604fc",
+    "revision": "ae5b3c3a189003671199fc48bb55ff39",
     "url": "/online-ordering-price-comparison/index.html"
   },
   {
-    "revision": "b1eb3d379e1d2fbf8072",
-    "url": "/online-ordering-price-comparison/static/css/main.2194f7d4.chunk.css"
+    "revision": "1410073b58b20d474259",
+    "url": "/online-ordering-price-comparison/static/css/main.d6d2e617.chunk.css"
   },
   {
     "revision": "fde5898bef1cee99b8ed",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/online-ordering-price-comparison/static/js/2.899316af.chunk.js.LICENSE"
   },
   {
-    "revision": "b1eb3d379e1d2fbf8072",
-    "url": "/online-ordering-price-comparison/static/js/main.a97c0bb7.chunk.js"
+    "revision": "1410073b58b20d474259",
+    "url": "/online-ordering-price-comparison/static/js/main.a8908e1a.chunk.js"
   },
   {
     "revision": "30487d9fd4bf4822f447",
