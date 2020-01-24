@@ -13,7 +13,8 @@ class PriceCalc extends Component {
 			{ name: 'Eat Street', fee: null, specialInformation: null, isPercent: null, annualCost: 0 },
 			{ name: 'Menufy', fee: null, specialInformation: null, isPercent: null, annualCost: 0 },
 			{ name: 'Uber Eats', fee: null, specialInformation: null, isPercent: null, annualCost: 0 },
-			{ name: 'Door Dash', fee: null, specialInformation: null, isPercent: null, annualCost: 0 }
+			{ name: 'Door Dash', fee: null, specialInformation: null, isPercent: null, annualCost: 0 },
+			{ name: 'Slice', fee: null, specialInformation: null, isPercent: null, annualCost: 0 }
 		]
 	};
 
@@ -46,36 +47,43 @@ class PriceCalc extends Component {
 					fee                : 0.2,
 					specialInformation : false,
 					isPercent          : true,
-					annualCost         : Math.round(this.state.pricePerOrder * this.state.ordersPerWeek * weeks * 0.2)
+					annualCost         : weeks * 0.2 * this.state.pricePerOrder * this.state.ordersPerWeek
 				},
 				{
 					name               : 'Eat Street',
 					fee                : 0.12,
 					specialInformation : false,
 					isPercent          : true,
-					annualCost         : Math.round(this.state.pricePerOrder * this.state.ordersPerWeek * weeks * 0.12)
+					annualCost         : weeks * 0.12 * this.state.pricePerOrder * this.state.ordersPerWeek
 				},
 
 				{
 					name               : 'Menufy',
 					fee                : 1.5,
-					specialInformation : false,
+					specialInformation : 'Passed To Customer',
 					isPercent          : false,
-					annualCost         : Math.round(this.state.ordersPerWeek * 1.5 * weeks)
+					annualCost         : 1.5 * weeks * this.state.ordersPerWeek
 				},
 				{
 					name               : 'Uber Eats',
 					fee                : 0.3,
 					specialInformation : false,
 					isPercent          : true,
-					annualCost         : Math.round(this.state.pricePerOrder * this.state.ordersPerWeek * weeks * 0.3)
+					annualCost         : weeks * 0.3 * this.state.pricePerOrder * this.state.ordersPerWeek
 				},
 				{
 					name               : 'Door Dash',
 					fee                : 0.2,
 					specialInformation : false,
 					isPercent          : true,
-					annualCost         : Math.round(this.state.pricePerOrder * this.state.ordersPerWeek * weeks * 0.2)
+					annualCost         : weeks * 0.2 * this.state.pricePerOrder * this.state.ordersPerWeek
+				},
+				{
+					name               : 'Slice',
+					fee                : 1.95,
+					specialInformation : 'Passed To Customer',
+					isPercent          : false,
+					annualCost         : Math.round(1.95 * weeks * this.state.ordersPerWeek)
 				}
 			]
 		});
