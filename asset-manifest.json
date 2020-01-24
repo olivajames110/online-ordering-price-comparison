@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/online-ordering-price-comparison/static/css/main.d6d2e617.chunk.css",
-    "main.js": "/online-ordering-price-comparison/static/js/main.a8908e1a.chunk.js",
-    "main.js.map": "/online-ordering-price-comparison/static/js/main.a8908e1a.chunk.js.map",
+    "main.js": "/online-ordering-price-comparison/static/js/main.d45b5879.chunk.js",
+    "main.js.map": "/online-ordering-price-comparison/static/js/main.d45b5879.chunk.js.map",
     "runtime-main.js": "/online-ordering-price-comparison/static/js/runtime-main.2d74de76.js",
     "runtime-main.js.map": "/online-ordering-price-comparison/static/js/runtime-main.2d74de76.js.map",
     "static/js/2.899316af.chunk.js": "/online-ordering-price-comparison/static/js/2.899316af.chunk.js",
     "static/js/2.899316af.chunk.js.map": "/online-ordering-price-comparison/static/js/2.899316af.chunk.js.map",
     "index.html": "/online-ordering-price-comparison/index.html",
-    "precache-manifest.d2588aba42c83903171fba6ea02c5a02.js": "/online-ordering-price-comparison/precache-manifest.d2588aba42c83903171fba6ea02c5a02.js",
+    "precache-manifest.94174b07d11c21a2a561d54578779caa.js": "/online-ordering-price-comparison/precache-manifest.94174b07d11c21a2a561d54578779caa.js",
     "service-worker.js": "/online-ordering-price-comparison/service-worker.js",
     "static/css/main.d6d2e617.chunk.css.map": "/online-ordering-price-comparison/static/css/main.d6d2e617.chunk.css.map",
     "static/js/2.899316af.chunk.js.LICENSE": "/online-ordering-price-comparison/static/js/2.899316af.chunk.js.LICENSE"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.2d74de76.js",
     "static/js/2.899316af.chunk.js",
     "static/css/main.d6d2e617.chunk.css",
-    "static/js/main.a8908e1a.chunk.js"
+    "static/js/main.d45b5879.chunk.js"
   ]
 }
