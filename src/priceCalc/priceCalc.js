@@ -5,10 +5,9 @@ import './css/priceCalcMain.css';
 
 class PriceCalc extends Component {
 	state = {
-		pricePerOrder       : 100,
-		ordersPerWeek       : 50,
-		pricePerOrderAmount : 100,
-		companies           : [
+		pricePerOrder : 100,
+		ordersPerWeek : 50,
+		companies     : [
 			{ name: 'GrubHub', fee: null, specialInformation: null, isPercent: null, annualCost: 0 },
 			{ name: 'Eat Street', fee: null, specialInformation: null, isPercent: null, annualCost: 0 },
 			{ name: 'Menufy', fee: null, specialInformation: null, isPercent: null, annualCost: 0 },
@@ -19,26 +18,29 @@ class PriceCalc extends Component {
 	};
 
 	componentDidMount() {
-		this.handleAnnualCost();
+		this.handleAnnualCost(this.state.pricePerOrder, this.state.ordersPerWeek);
 	}
 
 	updatePricePerOrder = (e) => {
+		let num = e.target.value;
 		this.setState({
 			pricePerOrder : e.target.value
 		});
 
-		this.handleAnnualCost();
+		this.handleAnnualCost(num, this.state.ordersPerWeek);
 	};
 
 	updateOrdersPerWeek = (e) => {
+		let num = e.target.value;
+
 		this.setState({
 			ordersPerWeek : e.target.value
 		});
 
-		this.handleAnnualCost();
+		this.handleAnnualCost(this.state.pricePerOrder, num);
 	};
 
-	handleAnnualCost = () => {
+	handleAnnualCost = (price, quantity) => {
 		let weeks = 52;
 		this.setState({
 			companies : [
@@ -47,14 +49,14 @@ class PriceCalc extends Component {
 					fee                : 0.2,
 					specialInformation : false,
 					isPercent          : true,
-					annualCost         : weeks * 0.2 * this.state.pricePerOrder * this.state.ordersPerWeek
+					annualCost         : weeks * 0.2 * price * quantity
 				},
 				{
 					name               : 'Eat Street',
 					fee                : 0.12,
 					specialInformation : false,
 					isPercent          : true,
-					annualCost         : weeks * 0.12 * this.state.pricePerOrder * this.state.ordersPerWeek
+					annualCost         : weeks * 0.12 * price * quantity
 				},
 
 				{
@@ -62,28 +64,28 @@ class PriceCalc extends Component {
 					fee                : 1.5,
 					specialInformation : 'Passed To Customer',
 					isPercent          : false,
-					annualCost         : 1.5 * weeks * this.state.ordersPerWeek
+					annualCost         : 1.5 * weeks * quantity
 				},
 				{
 					name               : 'Uber Eats',
 					fee                : 0.3,
 					specialInformation : false,
 					isPercent          : true,
-					annualCost         : weeks * 0.3 * this.state.pricePerOrder * this.state.ordersPerWeek
+					annualCost         : weeks * 0.3 * price * quantity
 				},
 				{
 					name               : 'Door Dash',
 					fee                : 0.2,
 					specialInformation : false,
 					isPercent          : true,
-					annualCost         : weeks * 0.2 * this.state.pricePerOrder * this.state.ordersPerWeek
+					annualCost         : weeks * 0.2 * price * quantity
 				},
 				{
 					name               : 'Slice',
 					fee                : 1.95,
-					specialInformation : 'Passed To Customer',
+					specialInformation : false,
 					isPercent          : false,
-					annualCost         : Math.round(1.95 * weeks * this.state.ordersPerWeek)
+					annualCost         : Math.round(1.95 * weeks * quantity)
 				}
 			]
 		});

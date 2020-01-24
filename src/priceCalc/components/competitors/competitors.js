@@ -26,7 +26,7 @@ export default class Competitors extends Component {
 					</span>
 					<span style={{ color: 'var(--priceCalcCompRed)' }}>${company.annualCost.toLocaleString()}</span>
 					<span style={{ color: 'var(--priceCalcCompGreen)' }}>
-						${(company.annualCost - 2388).toLocaleString()}{' '}
+						${company.annualCost - 2388 <= 0 ? 0 : (company.annualCost - 2388).toLocaleString()}
 					</span>
 				</div>
 			);
