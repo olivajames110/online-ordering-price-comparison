@@ -1,24 +1,12 @@
 html {
-	--priceCalcBG1: #607ed6;
-	--priceCalcBG2: #8884c4;
+	--priceCalcBG1: #035a99;
+	--priceCalcBG2: #4179a0;
 	// --priceCalcBG2: #75768a;
 	--priceCalcCompBar: rgb(243, 243, 243);
 	--priceCalcCompRed: #b10500;
 	--priceCalcCompGreen: #639b17;
-	--priceCalcSliderGreen: #078a7a;
+	--priceCalcSliderGreen: #0c4e7e;
 	--cardBorderColor: #d0d0d0;
-}
-
-html[data-theme='dark'] {
-	--priceCalcBG1: #403a9c;
-	// --priceCalcBG1: #1a443a;
-	// --priceCalcBG2: #264d48;
-	--priceCalcBG2: #4349a4;
-	--priceCalcCompBar: rgb(47, 47, 47);
-	--priceCalcCompRed: #ff7044;
-	--priceCalcCompGreen: #4ec46e;
-	--priceCalcSliderGreen: #66cdc1;
-	--cardBorderColor: #383838;
 }
 
 .bg {
@@ -52,7 +40,7 @@ html[data-theme='dark'] {
 .companies-table-title,
 .competitor-container {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 0.6fr;
+	grid-template-columns: 1fr 1fr 1fr 0.8fr;
 	padding: 10px 25px;
 	margin: 0 -15px;
 }
@@ -68,7 +56,7 @@ html[data-theme='dark'] {
 	height: initial;
 	max-width: 1000px;
 	width: 100%;
-	font-family: 'Roboto', sans-serif;
+	// font-family: 'Roboto', sans-serif;
 	padding: 5px;
 	box-sizing: border-box;
 	display: flex;
@@ -78,21 +66,21 @@ html[data-theme='dark'] {
 	margin: 0 auto;
 	color: var(--color-text);
 	.intro-header {
-		padding: 35px 0 45px 0;
+		padding: 15px 0 45px 0;
 		text-align: center;
 		color: white;
 		h1 {
 			display: flex;
 			flex-direction: column;
 			font-size: 2.5em;
-			font-family: var(--h1);
-			font-weight: bold;
+			// font-family: var(--h1);
+			// font-weight: bold;
 		}
 		.description {
 			font-size: 1.1em;
 			line-height: 1.5em;
 			margin-top: 10px;
-			font-family: var(--body);
+			// font-family: var(--body);
 		}
 	}
 	.range-container {
@@ -108,8 +96,11 @@ html[data-theme='dark'] {
 	box-sizing: border-box;
 }
 .companies-table-title h3 {
-	font-size: 0.7em;
+	font-size: 1em;
 	font-weight: bold;
+	// padding-right: 20px;
+	// font-size: 0.7em;
+	text-align: left;
 }
 .competitor-wrapper {
 	width: 100%;
@@ -145,52 +136,38 @@ html[data-theme='dark'] {
 		}
 	}
 }
+.range-description {
+	font-size: 1em;
+	text-align: left;
+}
 .competitor-company-commission-wrapper {
 	width: 530px;
 	display: flex;
 	align-items: center;
 	width: 100%;
 }
-// ----------------- device media query -------------------
-#device-project-container[data-theme='iphone-container'] {
-	.companies-table-title,
-	.competitor-container {
-		grid-template-columns: 0.9fr 0.9fr 1.1fr 0.8fr;
-		padding: 15px 0;
-	}
-	.competitor-container {
-		span {
-			font-size: 0.8em;
-		}
-	}
-	.competitor-company-commission-wrapper {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	.range-slider-wrapper {
-		width: 100%;
-	}
-	.companies-table-title h3 {
-		padding-right: 20px;
-		font-size: 0.7em;
-	}
-	.range-title {
-		font-size: 1em;
-	}
-	.competitor-wrapper {
-		font-size: 0.9em;
-	}
-	.intro-header {
-		h1 {
-			font-size: 1.8em;
-		}
-		.description {
-			font-size: 1em;
-			line-height: 1.5em;
-		}
+
+.competitor-container {
+	span {
+		font-size: 0.8em;
 	}
 }
+.competitor-company-commission-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.intro-header {
+	h1 {
+		font-size: 1.8em;
+	}
+	.description {
+		font-size: 1em;
+		line-height: 1.5em;
+	}
+}
+
 @media only screen and (max-width: 900px) {
 	.companies-table-title,
 	.competitor-container {
@@ -202,6 +179,10 @@ html[data-theme='dark'] {
 			font-size: 0.8em;
 		}
 	}
+	.companies-table-title h3 {
+		margin-bottom: -20px;
+		padding-top: 10px;
+	}
 	.competitor-company-commission-wrapper {
 		display: flex;
 		flex-direction: column;
@@ -211,10 +192,13 @@ html[data-theme='dark'] {
 		width: 100%;
 	}
 	.companies-table-title h3 {
-		padding-right: 20px;
-		font-size: 0.7em;
+		font-size: 0.8em;
+		/* white-space: nowrap; */
+		transform: rotate(-30deg);
+		transform-origin: left;
+		line-height: 14px;
 	}
-	.range-title {
+	.range-description {
 		font-size: 1em;
 	}
 	.competitor-wrapper {

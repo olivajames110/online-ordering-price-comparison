@@ -14,7 +14,7 @@ export default class Competitors extends Component {
 	render() {
 		const { companies } = this.props;
 
-		const companiesList = companies.map(company => {
+		const companiesList = companies.map((company) => {
 			return (
 				<div className="competitor-container">
 					<span>{company.name}</span>
@@ -24,8 +24,10 @@ export default class Competitors extends Component {
 							<span className="special-information">{company.specialInformation}</span>
 						) : null}
 					</span>
-					<span style={{ color: 'var(--priceCalcCompRed)' }}>${company.annualCost}</span>
-					<span style={{ color: 'var(--priceCalcCompGreen)' }}>${companies[6].annualCost}</span>
+					<span style={{ color: 'var(--priceCalcCompRed)' }}>${company.annualCost.toLocaleString()}</span>
+					<span style={{ color: 'var(--priceCalcCompGreen)' }}>
+						${(company.annualCost - 2388).toLocaleString()}{' '}
+					</span>
 				</div>
 			);
 		});
@@ -37,7 +39,7 @@ export default class Competitors extends Component {
 						<h3>Online Ordering Company</h3>
 						<h3>Per Order Fee</h3>
 						<h3>Annual Cost From Fees</h3>
-						<h3>Annual Ordereze Cost </h3>
+						<h3>Savings With Ordereze</h3>
 					</div>
 					{companiesList}
 				</div>
