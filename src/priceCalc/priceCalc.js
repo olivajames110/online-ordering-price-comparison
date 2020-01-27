@@ -116,7 +116,7 @@ class PriceCalc extends Component {
 								isPercent={true}
 							/>
 							<Slider
-								title={'Weekly Order Amount'}
+								title={'Order Quantity'}
 								description={'In one week, I typically receive an average of about'}
 								minAmt={'0'}
 								maxAmt={'500'}

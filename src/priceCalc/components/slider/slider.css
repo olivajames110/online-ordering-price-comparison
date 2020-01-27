@@ -25,7 +25,7 @@ html[data-theme='dark'] {
 	margin: 0px 6px;
 	font-weight: bold;
 	border-bottom: 1px solid var(--priceCalcSliderGreen);
-	padding: 0px 6px 2px 6px;
+	/* padding: 0px 6px 2px 6px; */
 }
 
 .range-slider__range {
