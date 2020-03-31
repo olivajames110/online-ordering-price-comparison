@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/online-ordering-price-comparison/precache-manifest.01a35e9c140a8bb0ef91bfa2d61f3c12.js"
+  "/online-ordering-price-comparison/precache-manifest.986a5ea7fce4544da1b202e99d132f84.js"
 );
 
 self.addEventListener('message', (event) => {
