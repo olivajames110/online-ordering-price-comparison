@@ -7,14 +7,7 @@ class PriceCalc extends Component {
 	state = {
 		pricePerOrder : 100,
 		ordersPerWeek : 50,
-		companies     : [
-			{ name: 'GrubHub', fee: null, specialInformation: null, isPercent: null, annualCost: 0 },
-			{ name: 'Eat Street', fee: null, specialInformation: null, isPercent: null, annualCost: 0 },
-			{ name: 'Menufy', fee: null, specialInformation: null, isPercent: null, annualCost: 0 },
-			{ name: 'Uber Eats', fee: null, specialInformation: null, isPercent: null, annualCost: 0 },
-			{ name: 'Door Dash', fee: null, specialInformation: null, isPercent: null, annualCost: 0 },
-			{ name: 'Slice', fee: null, specialInformation: null, isPercent: null, annualCost: 0 }
-		]
+		companies     : []
 	};
 
 	componentDidMount() {
@@ -26,22 +19,21 @@ class PriceCalc extends Component {
 		this.setState({
 			pricePerOrder : e.target.value
 		});
-
 		this.handleAnnualCost(num, this.state.ordersPerWeek);
 	};
 
 	updateOrdersPerWeek = (e) => {
 		let num = e.target.value;
-
 		this.setState({
 			ordersPerWeek : e.target.value
 		});
-
 		this.handleAnnualCost(this.state.pricePerOrder, num);
 	};
 
 	handleAnnualCost = (price, quantity) => {
 		let weeks = 52;
+		let priceMultiplier = price * quantity;
+		let weeksMultiplier = weeks * quantity;
 		this.setState({
 			companies : [
 				{
@@ -49,14 +41,14 @@ class PriceCalc extends Component {
 					fee                : 0.2,
 					specialInformation : false,
 					isPercent          : true,
-					annualCost         : weeks * 0.2 * price * quantity
+					annualCost         : weeks * 0.2 * priceMultiplier
 				},
 				{
 					name               : 'Eat Street',
 					fee                : 0.12,
 					specialInformation : false,
 					isPercent          : true,
-					annualCost         : weeks * 0.12 * price * quantity
+					annualCost         : weeks * 0.12 * priceMultiplier
 				},
 
 				{
@@ -64,28 +56,42 @@ class PriceCalc extends Component {
 					fee                : 1.5,
 					specialInformation : 'Passed To Customer',
 					isPercent          : false,
-					annualCost         : 1.5 * weeks * quantity
+					annualCost         : 1.5 * weeksMultiplier
 				},
 				{
 					name               : 'Uber Eats',
 					fee                : 0.3,
 					specialInformation : false,
 					isPercent          : true,
-					annualCost         : weeks * 0.3 * price * quantity
+					annualCost         : weeks * 0.3 * priceMultiplier
 				},
 				{
 					name               : 'Door Dash',
 					fee                : 0.2,
 					specialInformation : false,
 					isPercent          : true,
-					annualCost         : weeks * 0.2 * price * quantity
+					annualCost         : weeks * 0.2 * priceMultiplier
+				},
+				{
+					name               : 'Chow Now',
+					fee                : 199,
+					specialInformation : 'Requires Annual Contract',
+					isPercent          : false,
+					annualCost         : 2388
+				},
+				{
+					name               : 'BentoBox',
+					fee                : 0.99,
+					specialInformation : false,
+					isPercent          : false,
+					annualCost         : 0.99 * weeksMultiplier
 				},
 				{
 					name               : 'Slice',
 					fee                : 1.95,
 					specialInformation : false,
 					isPercent          : false,
-					annualCost         : Math.round(1.95 * weeks * quantity)
+					annualCost         : Math.round(1.95 * weeksMultiplier)
 				}
 			]
 		});
@@ -98,7 +104,7 @@ class PriceCalc extends Component {
 					<div className="bg" />
 					<div className="range-widget-container">
 						<div className="intro-header">
-							<h1>Online Ordering Commission Calculator</h1>
+							<h1>See Your Savings</h1>
 							<h3 className="description">
 								How much money are you giving away to various third-party online ordering companies?
 							</h3>

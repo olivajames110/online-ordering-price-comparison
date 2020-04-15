@@ -26,7 +26,7 @@ export default class Competitors extends Component {
 					</span>
 					<span style={{ color: 'var(--priceCalcCompRed)' }}>${company.annualCost.toLocaleString()}</span>
 					<span style={{ color: 'var(--priceCalcCompGreen)' }}>
-						${company.annualCost - 2388 <= 0 ? 0 : (company.annualCost - 2388).toLocaleString()}
+						${company.annualCost - 1188 <= 0 ? 0 : (company.annualCost - 1188).toLocaleString()}
 					</span>
 				</div>
 			);
@@ -47,75 +47,3 @@ export default class Competitors extends Component {
 		);
 	}
 }
-
-// <div id="grubhub" className="competitor-container">
-// <span className="competitor-company ">Grubhub</span>
-// <span className="competitor-commission-amt" />
-// <span id="grubhub-competitor" className="competitor-price-amt competitor-red">
-//    $479,024
-// </span>
-// <span id="ordereze-competitor" className="competitor-price-amt competitor-green">
-//    $2,388
-// </span>
-// </div>
-
-// <div id="eatstreet" className="competitor-container">
-// <span className="competitor-company ">Eatstreet</span>
-// <span className="competitor-commission-amt" />
-// <span id="eatstreet-competitor" className="competitor-price-amt competitor-red">
-//    $287,414
-// </span>
-// <span id="ordereze-competitor" className="competitor-price-amt competitor-green">
-//    $2,388
-// </span>
-// </div>
-// <div id="chownow" className="competitor-container">
-// <span className="competitor-company ">Chownow</span>
-// <span className="competitor-commission-amt"> $119</span>
-// <span id="chownow-competitor" className="competitor-price-amt competitor-red">
-//    $1,428
-// </span>
-// <span id="ordereze-competitor" className="competitor-price-amt competitor-green">
-//    $2,388
-// </span>
-// </div>
-// <div id="menufy" className="competitor-container">
-// <span className="competitor-company ">Menufy</span>
-// <span className="competitor-commission-amt">$1.50</span>
-// <span id="menufy-competitor" className="competitor-price-amt competitor-red">
-//    $36,660
-// </span>
-// <span id="ordereze-competitor" className="competitor-price-amt competitor-green">
-//    $2,388
-// </span>
-// </div>
-// <div id="uber-eats" className="competitor-container">
-// <span className="competitor-company ">Uber Eats</span>
-// <span className="competitor-commission-amt">30%</span>
-// <span id="uber-eats-competitor" className="competitor-price-amt competitor-red">
-//    $718,536
-// </span>
-// <span id="ordereze-competitor" className="competitor-price-amt competitor-green">
-//    $2,388
-// </span>
-// </div>
-// <div id="door-dash" className="competitor-container">
-// <span className="competitor-company ">Door Dash</span>
-// <span className="competitor-commission-amt">20%</span>
-// <span id="door-dash-competitor" className="competitor-price-amt competitor-red">
-//    $479,024
-// </span>
-// <span id="ordereze-competitor" className="competitor-price-amt competitor-green">
-//    $2,388
-// </span>
-// </div>
-// <div id="ordereze" className="competitor-container">
-// <span className="competitor-company competitor-green">Ordereze</span>
-// <span className="competitor-commission-amt">5%</span>
-// <span id="ordereze-competitor" className="competitor-price-amt competitor-green">
-//    $2,388
-// </span>
-// <span id="ordereze-competitor" className="competitor-price-amt competitor-green">
-//    $2,388
-// </span>
-// </div>

@@ -72,7 +72,11 @@ html {
 		h1 {
 			display: flex;
 			flex-direction: column;
-			font-size: 2.5em;
+			// font-size: 2.5em;
+			margin-top: 30px;
+			font-weight: 700;
+			line-height: .5em;
+			font-size: 28px;
 			// font-family: var(--h1);
 			// font-weight: bold;
 		}
@@ -160,7 +164,7 @@ html {
 
 .intro-header {
 	h1 {
-		font-size: 1.8em;
+		// font-size: 1.8em;
 	}
 	.description {
 		font-size: 1em;

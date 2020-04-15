@@ -94,7 +94,10 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 2.5em;
+  margin-top: 30px;
+  font-weight: 700;
+  line-height: .5em;
+  font-size: 28px;
 }
 
 .range-widget-container .intro-header .description {
@@ -203,10 +206,6 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.intro-header h1 {
-  font-size: 1.8em;
 }
 
 .intro-header .description {
