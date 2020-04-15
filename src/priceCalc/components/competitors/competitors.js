@@ -13,7 +13,8 @@ export default class Competitors extends Component {
 
 	render() {
 		const { companies } = this.props;
-
+		const orderezeCapPrice = 99;
+		const orderezeMaxFee = orderezeCapPrice * 12;
 		const companiesList = companies.map((company) => {
 			return (
 				<div className="competitor-container">
@@ -26,7 +27,11 @@ export default class Competitors extends Component {
 					</span>
 					<span style={{ color: 'var(--priceCalcCompRed)' }}>${company.annualCost.toLocaleString()}</span>
 					<span style={{ color: 'var(--priceCalcCompGreen)' }}>
-						${company.annualCost - 1188 <= 0 ? 0 : (company.annualCost - 1188).toLocaleString()}
+						${company.annualCost - orderezeMaxFee <= 0 ? (
+							0
+						) : (
+							(company.annualCost - orderezeMaxFee).toLocaleString()
+						)}
 					</span>
 				</div>
 			);

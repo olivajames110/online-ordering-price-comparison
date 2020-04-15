@@ -74,10 +74,10 @@ class PriceCalc extends Component {
 				},
 				{
 					name               : 'Chow Now',
-					fee                : 199,
+					fee                : 119,
 					specialInformation : 'Requires Annual Contract',
 					isPercent          : false,
-					annualCost         : 2388
+					annualCost         : 1428
 				},
 				{
 					name               : 'BentoBox',
